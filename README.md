@@ -65,11 +65,11 @@ npm publish                   # 发布；之后其他项目即可 npx 安装
 
 ```bash
 # 先在 GitHub 创建同名空仓库（不要勾选 README），然后：
-git remote add origin https://github.com/<your-name>/java-microservice-structure-skill.git
+git remote add origin https://github.com/loginsss/java-microservice-structure-skill.git
 git push -u origin main
 ```
 
-> 提示：发布前把 `package.json` 中 `repository.url` 的 `<your-name>` 替换为真实 GitHub 用户名。
+> 远程已指向 `https://github.com/loginsss/java-microservice-structure-skill.git`，在 GitHub 创建同名空仓库后直接 `git push -u origin main` 即可。
 
 ## 维护：更新 skill 内容
 
