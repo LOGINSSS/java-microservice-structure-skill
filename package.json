@@ -1,7 +1,7 @@
 {
   "name": "java-microservice-structure-skill",
   "version": "0.2.0",
-  "description": "DSH skill 深度技能包（多文件 bundle）：通用 Java 微服务（Spring Cloud + Spring Boot + MyBatis-Plus）模块设计。含模块结构详解、pom 依赖矩阵、通用工具库（hutool/分页/用户上下文/线程池）、跨服务协作范式（Feign/MQ/锁/任务）、模块设计 CoT 思维链工作流 + few-shot、质量检查清单，附 tjxt 完整实例。可安装到任意项目 .dsh/skills/ 或 DSH 用户目录 skills/。",
+  "description": "DSH skill 深度技能包（多文件 bundle）：通用 Java 微服务（Spring Cloud + Spring Boot + MyBatis-Plus）模块设计。含模块结构详解、pom 依赖矩阵、通用工具库（hutool/分页/用户上下文/线程池）、跨服务协作范式（Feign/MQ/锁/任务）、模块设计 CoT 思维链工作流 + few-shot、质量检查清单，附生产级 17 模块工程完整实例。可安装到任意项目 .dsh/skills/ 或 DSH 用户目录 skills/。",
   "keywords": [
     "dsh",
     "skill",
