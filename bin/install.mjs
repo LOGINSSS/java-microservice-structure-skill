@@ -68,8 +68,9 @@ if (existsSync(dest)) {
   rmSync(dest, { recursive: true, force: true });
 }
 mkdirSync(dest, { recursive: true });
-cpSync(join(SKILL_SRC, 'SKILL.md'), join(dest, 'SKILL.md'));
+// 复制整个 skill bundle（SKILL.md + references/ 等资源目录）
+cpSync(SKILL_SRC, dest, { recursive: true });
 
 console.log(`✔ skill 已安装: ${dest}`);
 console.log(`  类型: ${toUser ? '用户级（全局生效）' : '项目级（当前项目生效）'}`);
-console.log('  DSH 会自动发现该 skill（无需重启；frontmatter 变更触发目录刷新）');
+console.log('  内容: SKILL.md + references/ bundle（DSH 自动发现，无需重启）');
