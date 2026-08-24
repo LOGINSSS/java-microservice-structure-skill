@@ -1,0 +1,38 @@
+{
+  "name": "java-microservice-structure-skill",
+  "version": "0.1.0",
+  "description": "DSH skill（DeepSeek Harness skill）：通用 Java 微服务（Spring Cloud + Spring Boot）的模块划分与目录结构设计范式，附天机学堂（tjxt）完整落地实例。可安装到任意项目的 .dsh/skills/ 或 DSH 用户目录 skills/，让 AI 助手在微服务开发中按行业标准结构导航、定位与新增模块。",
+  "keywords": [
+    "dsh",
+    "skill",
+    "agent-skill",
+    "microservice",
+    "spring-cloud",
+    "spring-boot",
+    "architecture",
+    "module-structure",
+    "java"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "java-microservice-structure-skill": "bin/install.mjs",
+    "jmss-install": "bin/install.mjs"
+  },
+  "files": [
+    "bin",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<your-name>/java-microservice-structure-skill.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
