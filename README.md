@@ -4,7 +4,7 @@
 
 **通用 Java 微服务模块设计的 DSH 技能包** — 从需求到落地的完整设计链路
 
-[![version](https://img.shields.io/badge/version-0.2.0-blue)](./package.json)
+[![version](https://img.shields.io/badge/version-0.3.0-blue)](./package.json)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![node](https://img.shields.io/badge/node-%3E%3D18-339933)](./package.json)
 [![type](https://img.shields.io/badge/type-DSH%20skill-brightgreen)](./skills/java-microservice-structure/SKILL.md)
@@ -77,6 +77,26 @@ npx java-microservice-structure-skill
 ```
 
 安装到 `$DSH_HOME/skills/` 或 `<project>/.dsh/skills/`，**复制整个 bundle**，DSH 自动发现、无需重启。
+
+## 🔌 多工具支持（不止 DSH）
+
+技能包是**纯 Markdown bundle**，遵循「`<name>/SKILL.md` + frontmatter(`name`/`description`)」这一事实标准，DSH、Claude Code、OpenCode、Cursor 等均可直接使用。安装器 `bin/install.mjs` 内置多目标：
+
+```bash
+npx java-microservice-structure-skill --target dsh,claude,opencode,cursor --user   # 一次装到全部工具
+npx java-microservice-structure-skill --target claude --project                   # 仅 Claude Code，项目级
+npx java-microservice-structure-skill --target agents --project                   # 生成 AGENTS.md 通用指引
+```
+
+| 工具 | 目标目录（用户级） | 发现方式 |
+|---|---|---|
+| DSH (DeepSeek Harness) | `~/.dsh/skills/` | skills 目录扫描 |
+| Claude Code | `~/.claude/skills/` 或 `.claude/skills/` | skills 目录扫描 |
+| OpenCode | `~/.config/opencode/skills/` 或 `.opencode/skills/` | skills 目录扫描 + AGENTS.md |
+| Cursor | `~/.cursor/skills/` 或 `.cursor/skills/` | skills 目录扫描 |
+| Codex / 其他 | 项目根 `AGENTS.md`（`--target agents` 生成） | AGENTS.md 项目指令 |
+
+> 兼容说明：frontmatter 仅用通用字段 `name`/`description`（`whenToUse` 为 DSH 扩展，其他工具忽略无害）；若工具不解析 SKILL.md 内相对链接（部分 Claude Code 版本），可用绝对路径或 `${CLAUDE_SKILL_DIR}/references/<文件>` 引用。
 
 ## 🧭 使用导航
 

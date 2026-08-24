@@ -36,6 +36,7 @@ skills/java-microservice-structure/
 | 需要真实项目参照 / 查某个 tjxt 类在哪个包 | `references/07-tjxt-example.md` | tjxt 完整目录树 |
 
 > 所有 `references/` 文件与本 SKILL.md 同目录，可用 read 工具按相对路径读取。
+> **跨工具提示**：本技能包为纯 Markdown bundle，兼容 DSH、Claude Code、OpenCode、Cursor 等所有按「SKILL.md + frontmatter(name/description)」发现 skill 的工具（安装器 `bin/install.mjs` 支持 `--target dsh|claude|opencode|cursor|agents`）。若某工具不解析 SKILL.md 内的相对链接（如部分 Claude Code 版本），请用绝对路径或 `${CLAUDE_SKILL_DIR}/references/<文件名>` 形式引用资源；OpenCode/Codex 等支持 AGENTS.md 的工具，也可用 `--target agents` 生成项目级 AGENTS.md 指引。
 
 ## 核心设计原则（贯穿所有文件）
 
